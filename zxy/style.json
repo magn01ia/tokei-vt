@@ -1,0 +1,299 @@
+{
+  "version": 8,
+  "sources": {
+    "tokei": {
+      "type": "vector",
+      "attribution": "国土数値情報",
+      "minzoom": 8,
+      "maxzoom": 14,
+      "tiles": [
+        "https://magn01ia.github.io/tokei-vt/zxy/{z}/{x}/{y}.pbf"
+      ]
+    }
+  },
+  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "cho",
+      "type": "line",
+      "source": "tokei",
+      "source-layer": "chouseikuiki",
+      "minzoom": 8,
+      "paint": {
+        "line-color": "#ff00ff",
+        "line-width": 2,
+        "line-dasharray": [
+          4,
+          2
+        ],
+        "line-opacity": 0.5
+      }
+    },
+    {
+      "id": "d1t",
+      "type": "fill",
+      "source": "tokei",
+      "source-layer": "youto",
+      "filter": [
+        "all",
+        [
+          "==",
+          "用途地域",
+          "第一種低層住居専用地域"
+        ]
+      ],
+      "paint": {
+        "fill-color": "#008000",
+        "fill-opacity": 0.5
+      }
+    },
+    {
+      "id": "d2t",
+      "type": "fill",
+      "source": "tokei",
+      "source-layer": "youto",
+      "filter": [
+        "all",
+        [
+          "==",
+          "用途地域",
+          "第二種低層住居専用地域"
+        ]
+      ],
+      "paint": {
+        "fill-color": "#90ee90 ",
+        "fill-opacity": 0.5
+      }
+    },
+    {
+      "id": "d1c",
+      "type": "fill",
+      "source": "tokei",
+      "source-layer": "youto",
+      "filter": [
+        "all",
+        [
+          "==",
+          "用途地域",
+          "第一種中高層住居専用地域"
+        ]
+      ],
+      "paint": {
+        "fill-color": "#adff2f ",
+        "fill-opacity": 0.5
+      }
+    },
+    {
+      "id": "d2c",
+      "type": "fill",
+      "source": "tokei",
+      "source-layer": "youto",
+      "filter": [
+        "all",
+        [
+          "==",
+          "用途地域",
+          "第二種中高層住居専用地域"
+        ]
+      ],
+      "paint": {
+        "fill-color": "#98fb98 ",
+        "fill-opacity": 0.5
+      }
+    },
+    {
+      "id": "d1j",
+      "type": "fill",
+      "source": "tokei",
+      "source-layer": "youto",
+      "filter": [
+        "all",
+        [
+          "==",
+          "用途地域",
+          "第一種住居地域"
+        ]
+      ],
+      "paint": {
+        "fill-color": "#ffff00",
+        "fill-opacity": 0.5
+      }
+    },
+    {
+      "id": "d2j",
+      "type": "fill",
+      "source": "tokei",
+      "source-layer": "youto",
+      "filter": [
+        "all",
+        [
+          "==",
+          "用途地域",
+          "第二種住居地域"
+        ]
+      ],
+      "paint": {
+        "fill-color": "#ffd700",
+        "fill-opacity": 0.5
+      }
+    },
+    {
+      "id": "jj",
+      "type": "fill",
+      "source": "tokei",
+      "source-layer": "youto",
+      "filter": [
+        "all",
+        [
+          "==",
+          "用途地域",
+          "準住居地域"
+        ]
+      ],
+      "paint": {
+        "fill-color": "#ffa500",
+        "fill-opacity": 0.5
+      }
+    },
+    {
+      "id": "dj",
+      "type": "fill",
+      "source": "tokei",
+      "source-layer": "youto",
+      "filter": [
+        "all",
+        [
+          "==",
+          "用途地域",
+          "田園住居地域"
+        ]
+      ],
+      "paint": {
+        "fill-color": "#000000",
+        "fill-opacity": 0.5
+      }
+    },
+    {
+      "id": "ks",
+      "type": "fill",
+      "source": "tokei",
+      "source-layer": "youto",
+      "filter": [
+        "all",
+        [
+          "==",
+          "用途地域",
+          "近隣商業地域"
+        ]
+      ],
+      "paint": {
+        "fill-color": "#ffc0cb",
+        "fill-opacity": 0.5
+      }
+    },
+    {
+      "id": "s",
+      "type": "fill",
+      "source": "tokei",
+      "source-layer": "youto",
+      "filter": [
+        "all",
+        [
+          "==",
+          "用途地域",
+          "商業地域"
+        ]
+      ],
+      "paint": {
+        "fill-color": "#ff0000 ",
+        "fill-opacity": 0.5
+      }
+    },
+    {
+      "id": "jk",
+      "type": "fill",
+      "source": "tokei",
+      "source-layer": "youto",
+      "filter": [
+        "all",
+        [
+          "==",
+          "用途地域",
+          "準工業地域"
+        ]
+      ],
+      "paint": {
+        "fill-color": "#800080",
+        "fill-opacity": 0.5
+      }
+    },
+    {
+      "id": "k",
+      "type": "fill",
+      "source": "tokei",
+      "source-layer": "youto",
+      "filter": [
+        "all",
+        [
+          "==",
+          "用途地域",
+          "工業地域"
+        ]
+      ],
+      "paint": {
+        "fill-color": "#00ffff",
+        "fill-opacity": 0.5
+      }
+    },
+    {
+      "id": "kg",
+      "type": "fill",
+      "source": "tokei",
+      "source-layer": "youto",
+      "filter": [
+        "all",
+        [
+          "==",
+          "用途地域",
+          "工業専用地域"
+        ]
+      ],
+      "paint": {
+        "fill-color": "#0000ff",
+        "fill-opacity": 0.5
+      }
+    },
+    {
+      "id": "label",
+      "type": "symbol",
+      "source": "tokei",
+      "source-layer": "youto",
+      "minzoom": 13,
+      "layout": {
+        "symbol-placement": "point",
+        "text-field": "{用途地域}",
+        "text-font": [
+          "Open Sans Regular",
+          "Arial Unicode MS Regular"
+        ],
+        "text-padding": 0,
+        "text-pitch-alignment": "auto",
+        "text-rotation-alignment": "auto",
+        "text-max-width": 20,
+        "text-size": 12,
+        "text-anchor": "center"
+      }
+    },
+    {
+      "id": "line",
+      "type": "line",
+      "source": "tokei",
+      "source-layer": "youto",
+      "minzoom": 10,
+      "paint": {
+        "line-color": "#808080",
+        "line-opacity": 0.5
+      }
+    }
+  ]
+}
