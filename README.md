@@ -1,6 +1,6 @@
 # tokei-vt
 都市計画区域、用途市域等のベクトルタイル。  
-[unvt/nanban](https://github.com/unvt/nanban)を利用して作業。 
+[unvt/nanban(国連ベクトルタイルツールキットのDockerコンテナ)](https://github.com/unvt/nanban)を利用して作業。 
 
 ### サンプル  
 https://magn01ia.github.io/tokei-vt/
@@ -15,22 +15,23 @@ https://magn01ia.github.io/tokei-vt/
 用途地域データから市区町村、用途地域、建ぺい率、容積率の属性のみ残し残りは削除。
 
 ### 変換  
-QGIS  
+- QGIS  
 データの変換結合と属性の編集に使用  
 
-Tippecanoe  
-- pbf  
---no-tile-compression --no-feature-limit --no-tile-size-limit  
+- Tippecanoe  
+--no-tile-compression --no-feature-limit --no-tile-size-limit(pbf) 
 
 ### スタイル
-charites
+- charites  
+[地理院地図Vector（仮称）提供実験](https://github.com/gsi-cyberjapan/gsimaps-vector-experiment)をソースとし、[Mapbox GL JSで地理院地図Vector風の地図を表示するサンプル](https://github.com/gsi-cyberjapan/gsivectortile-mapbox-gl-js)の淡色地図(pale.json)をcharitesでコンバート、本ベクトルタイルのスタイルを差し込みの上ビルド。
+
 
 ### 目次  
 #### 栃木県
-url:/{z}/{x}/{y}.pbf  
-style:/style.json
+url:https://magn01ia.github.io/tokei-vt/zxy/{z}/{x}/{y}.pbf  
+style:https://magn01ia.github.io/tokei-vt/zxy/style.json
 - 都市地域(平成30年)  
 zoom:8-14  
 - 用途地域(令和元年)  
 zoom:8-14  
-
+※非線引区域のデータが抜けているの要修正
