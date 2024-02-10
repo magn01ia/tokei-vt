@@ -1,4 +1,4 @@
-# tokei-vt
+# tokei-vt(tokei-pmに移行中)
 都市計画区域、用途市域等のベクトルタイル。  
 [unvt/nanban(国連ベクトルタイルツールキットのDockerコンテナ)](https://github.com/unvt/nanban)を利用して作業。 
 
